@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover"
+  >
+
+  <title>TANCHIKI.io</title>
+
+  <link rel="stylesheet" href="/style.css">
+</head>
+
+<body>
+
+  <!-- Главное меню -->
+  <div id="menu" class="screen">
+
+    <div class="logo">
+      TANCHIKI<span>.io</span>
+    </div>
+
+    <div class="subtitle">
+      Multiplayer Tank Battle
+    </div>
+
+    <div class="join">
+
+      <input
+        id="name"
+        maxlength="16"
+        placeholder="Ваш ник"
+        value="Player"
+      >
+
+      <button id="play">
+        PLAY
+      </button>
+
+    </div>
+
+    <div id="status">
+      Connecting to server...
+    </div>
+
+    <div class="hint">
+      <b>ПК:</b>
+      WASD — движение · мышь — прицел · ЛКМ — стрелять
+      <br>
+
+      <b>Телефон:</b>
+      Левый джойстик — движение · правый джойстик — прицел и стрельба
+    </div>
+
+  </div>
+
+
+  <!-- Игровое поле -->
+  <canvas id="game"></canvas>
+
+
+  <!-- Интерфейс игры -->
+  <div id="hud" class="hidden">
+
+    <div class="topbar">
+
+      <div>
+        <b>TANCHIKI.io</b>
+        <span id="room">ONLINE</span>
+      </div>
+
+      <div id="score"></div>
+
+    </div>
+
+
+    <!-- Таблица игроков -->
+    <div id="board"></div>
+
+
+    <!-- Выход -->
+    <button id="exit">
+      EXIT
+    </button>
+
+  </div>
+
+
+  <!-- Мобильное управление -->
+  <div id="mobile" class="hidden">
+
+    <div id="leftJoy" class="joy">
+      <div class="knob"></div>
+    </div>
+
+    <div id="rightJoy" class="joy">
+      <div class="knob"></div>
+    </div>
+
+  </div>
+
+
+  <!-- Сообщения -->
+  <div id="toast"></div>
+
+
+  <!-- Код игры -->
+  <script src="/client.js"></script>
+
+</body>
+</html>
